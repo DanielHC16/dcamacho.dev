@@ -1,9 +1,68 @@
+'use client';
+
+import { useState, useEffect } from "react";
 import tally_image from "@/assets/images/tally_win.jpeg";
 import cheflakbayintro from "@/assets/images/cheflakbayintro.jpg";
 import coming_soon from "@/assets/images/coming-soon.jpg";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+
+const TypewriterText = ({ text, className = "" }: { text: string; className?: string }) => {
+  const [displayText, setDisplayText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isComplete, setIsComplete] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
+
+  // Blinking cursor effect
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 530); // Blink every 530ms
+
+    return () => clearInterval(cursorInterval);
+  }, []);
+
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText(prev => prev + text[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, 150); // Slower typing speed
+
+      return () => clearTimeout(timeout);
+    } else {
+      // When typing is complete, wait 3 seconds then start erasing
+      const pauseTimeout = setTimeout(() => {
+        setIsComplete(true);
+      }, 3000);
+      return () => clearTimeout(pauseTimeout);
+    }
+  }, [currentIndex, text]);
+
+  useEffect(() => {
+    if (isComplete && displayText.length > 0) {
+      const eraseTimeout = setTimeout(() => {
+        setDisplayText(prev => prev.slice(0, -1));
+      }, 50); // Erase one character at a time
+
+      return () => clearTimeout(eraseTimeout);
+    } else if (isComplete && displayText.length === 0) {
+      // Reset everything when fully erased
+      setCurrentIndex(0);
+      setIsComplete(false);
+    }
+  }, [isComplete, displayText]);
+
+  return (
+    <div className="flex justify-center w-full">
+      <span className={`${className} inline-block min-w-[300px] text-center`}>
+        {displayText}
+        <span className={`inline-block w-[2px] h-[1.2em] bg-amber-400 ml-[1px] align-middle -mb-[1px] ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`} />
+      </span>
+    </div>
+  );
+};
 
 const portfolioProjects = [
   {
@@ -51,7 +110,7 @@ export const ProjectsSection = () => {
         <div className="flex flex-col items-center gap-2">
           <div className="flex flex-col items-center gap-2">
             <p className="font-semibold tracking-widest text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-amber-300">
-              Innovate to Cultivate
+              <TypewriterText text="Innovate to Cultivate" />
             </p>
             <h2 className="text-2xl md:text-5xl font-serif font-semibold tracking-widest bg-gradient-to-r from-gray-900 to-amber-300 bg-clip-text text-transparent">
               Featured Projects
