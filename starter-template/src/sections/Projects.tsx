@@ -55,12 +55,10 @@ const TypewriterText = ({ text, className = "" }: { text: string; className?: st
   }, [isComplete, displayText]);
 
   return (
-    <div className="flex justify-center w-full">
-      <span className={`${className} inline-block min-w-[300px] text-center`}>
-        {displayText}
-        <span className={`inline-block w-[2px] h-[1.2em] bg-amber-400 ml-[1px] align-middle -mb-[1px] ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`} />
-      </span>
-    </div>
+    <span className={`${className} inline-flex justify-center min-w-[300px]`}>
+      {displayText}
+      <span className={`inline-block w-[2px] h-[1.2em] bg-amber-400 ml-[1px] align-middle -mb-[1px] ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`} />
+    </span>
   );
 };
 
@@ -109,7 +107,7 @@ export const ProjectsSection = () => {
       <div className="container max-w-5xl mx-auto">
         <div className="flex flex-col items-center gap-2">
           <div className="flex flex-col items-center gap-2">
-            <p className="font-semibold tracking-widest text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-amber-300">
+            <p className="font-semibold tracking-widest text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-amber-300 flex justify-center w-full">
               <TypewriterText text="Innovate to Cultivate" />
             </p>
             <h2 className="text-2xl md:text-5xl font-serif font-semibold tracking-widest bg-gradient-to-r from-gray-900 to-amber-300 bg-clip-text text-transparent">

@@ -83,7 +83,7 @@ export const TestimonialsSection = () => {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <section className="pb-16">
+    <section className="relative pb-48">
       <div className="container max-w-5xl mx-auto">
         <div className="flex flex-col items-center gap-2">
           <div className="flex flex-col items-center gap-2">
@@ -94,7 +94,7 @@ export const TestimonialsSection = () => {
               More Projects
             </h2>
           </div>
-          <p className="font-serif text-2xl md:text-xl text-black/60 mt-6 max-w-md text-center">
+          <p className="font-serif text-2xl md:text-xl text-black/60 mt-4 max-w-md text-center">
             Building is my passion, and these are some of the projects I've worked on.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-8">
@@ -130,7 +130,7 @@ export const TestimonialsSection = () => {
                 <div className="p-5 flex flex-col min-h-[280px]">
                   <div className="h-[120px]">
                     <h3 
-                      className="block font-serif text-xl font-semibold text-gray-900 group-hover:text-amber-600 
+                      className="block font-serif text-xl font-semibold text-gray-900 group-hover:text-amber-400 
                         transition-colors duration-300 ease-in-out line-clamp-1"
                     >
                       {project.title}
@@ -158,15 +158,16 @@ export const TestimonialsSection = () => {
           </div>
           <button 
             onClick={() => setShowAll(!showAll)}
-            className="mt-2 bg-white text-gray-950 h-12 px-8 rounded-xl font-semibold 
+            className="mt-4 bg-white text-gray-950 h-12 px-8 rounded-xl font-semibold 
               transition-all duration-300 ease-in-out transform hover:scale-105
-              hover:bg-gradient-to-r hover:from-amber-50 hover:to-amber-100
+              hover:bg-amber-500/10
               hover:shadow-md active:scale-95 border border-black/15 backdrop-blur"
           >
             {showAll ? 'Show Less' : 'Show More'}
           </button>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent via-white/50 to-white pointer-events-none" />
     </section>
   );
 };
