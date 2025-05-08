@@ -24,16 +24,7 @@ const config: Config = {
       fontFamily: {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',
-      },
-      animation: {
-        'move-left': 'move-left 30s linear infinite',
-      },
-      keyframes: {
-        'move-left': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-      },
+      }
     },
   },
   plugins: [],
