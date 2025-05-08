@@ -4,10 +4,10 @@
   "description": "Welcome to the Single Page Dev Portfolio Resource Bundle! This package contains everything you need to create a stunning, interactive portfolio using React, Next.js, TailwindCSS, and Framer Motion.",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "dev": "dev",
+    "build": "build",
+    "start": "start",
+    "lint": "lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
