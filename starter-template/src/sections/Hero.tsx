@@ -79,7 +79,7 @@ export const HeroSection = () => {
           <span className="font-seminbold">See my work</span>
         </button>
         <button className="inline-flex items-center justify-center gap-2 border border-black/15 rounded-xl backdrop-blur px-6 h-12 py-1.5 w-[180px] bg-black text-white transition-all duration-300 hover:bg-black/90 hover:shadow-sm">
-          <span className="font-seminbold">Let's connect</span>
+          <span className="font-seminbold">Let&apos;s connect</span>
         </button>
       </div>
     </div>
