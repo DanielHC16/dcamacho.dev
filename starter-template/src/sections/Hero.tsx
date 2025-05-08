@@ -71,7 +71,7 @@ export const HeroSection = () => {
         Full-Stack Developer
       </h1>
       <p className="mt-2 text-center text-black/60">
-        Where complexity and creativity collide—I'm there.
+        Where complexity and creativity collide—I&apos;m there.
       </p>
       </div>
       <div className="flex flex-row items-center justify-center mt-4 gap-4 justify-center">

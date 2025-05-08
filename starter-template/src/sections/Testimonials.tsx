@@ -95,7 +95,7 @@ export const TestimonialsSection = () => {
             </h2>
           </div>
           <p className="font-serif text-2xl md:text-xl text-black/60 mt-4 max-w-md text-center">
-            Building is my passion, and these are some of the projects I've worked on.
+            Building is my passion, and these are some of the projects I&apos;ve worked on.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-8">
             {otherProjects.map((project, index) => (
