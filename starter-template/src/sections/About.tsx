@@ -20,6 +20,9 @@ import flutterIcon from "@/assets/icons/flutter.svg";
 import photoshopIcon from "@/assets/icons/photoshop.svg";
 import postgresqlIcon from "@/assets/icons/postgres.svg";
 import mysqlIcon from "@/assets/icons/mysql.svg";
+import tailwindcss from "@/assets/icons/tailwindcss.svg";
+import nodejs from "@/assets/icons/nodejs.svg";
+import springboot from "@/assets/icons/springboot.svg";
 
 const mainTechStack = [
   {
@@ -51,12 +54,16 @@ const mainTechStack = [
     iconType: postgresqlIcon,
   },
   {
-    title: 'Flutter',
-    iconType: flutterIcon,
-  },
-  {
     title: 'Firebase',
     iconType: firebaseIcon,
+  },
+  {
+    title: 'Node.js',
+    iconType: nodejs,
+  },
+  {
+    title: 'Spring Boot',
+    iconType: springboot,
   },
 ];
 
@@ -68,6 +75,10 @@ const otherTechStack = [
   {
     title: 'CSS3',
     iconType: CSS3Icon,
+  },
+  {
+    title: 'Tailwind CSS',
+    iconType: tailwindcss,
   },
   {
     title: 'GitHub',
@@ -85,6 +96,7 @@ const otherTechStack = [
     title: 'Photoshop',
     iconType: photoshopIcon,
   },
+  
 ];
 
 export const AboutSection = () => {
