@@ -7,6 +7,7 @@ import coming_soon from "@/assets/images/coming-soon.jpg";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import signifAI from "@/assets/images/main_img.png";
 
 const TypewriterText = ({ text, className = "" }: { text: string; className?: string }) => {
   const [displayText, setDisplayText] = useState("");
@@ -88,16 +89,16 @@ const portfolioProjects = [
     image: cheflakbayintro,
   },
   {
-    company: "Samahan ng mga  Kababaihan",
+    company: "PLM CSS - DevelUP",
     year: "2025",
-    title: "Local Organization App",
+    title: "SignifAI - Gamified AI ASL Learning App",
     results: [
-      { title: "Developed a solution for a local organization" },
-      { title: "Improved organization productivity by 50%" },
-      { title: "Increased company organization by 30%" },
+      { title: "Led a team of 7 to develop and present a working prototype of a gamified AI ASL learning app" },
+      { title: "Recognized for Functionality and AI Accuracy" },
+      { title: "Effectively utilized AI to enhance learning experience" },
     ],
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    image: coming_soon,
+    link: "https://github.com/DanielHC16/signifai",
+    image: signifAI,
   },
 ];
 
